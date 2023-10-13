@@ -18,3 +18,19 @@ final lightTheme = ThemeData(
     titleTextStyle: TextStyle(color: AppColors.white, fontSize: 14),
   ),
 );
+
+final darkTheme = ThemeData(
+  fontFamily: GoogleFonts.poppins().fontFamily,
+  primarySwatch: getMaterialColor(AppColors.primary),
+  primaryColor: getMaterialColor(AppColors.primary),
+  brightness: Brightness.dark,
+  inputDecorationTheme: InputDecorationTheme(
+      border: OutlineInputBorder(borderSide: const BorderSide(width: 1), borderRadius: BorderRadius.circular(12))),
+  appBarTheme: const AppBarTheme(
+    color: AppColors.black,
+    elevation: 0,
+    centerTitle: true,
+    iconTheme: IconThemeData(color: AppColors.white),
+    titleTextStyle: TextStyle(color: AppColors.white, fontSize: 14),
+  ),
+);

@@ -1,4 +1,4 @@
-package com.example.tudu
+package dev.smolarek.tudu
 
 import io.flutter.embedding.android.FlutterActivity
 

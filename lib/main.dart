@@ -7,7 +7,6 @@ import 'package:tudu/core/translations/generated/l10n.dart';
 import 'package:tudu/injectable/injectable.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   injectDependencies();
   runApp(const MyApp());
 }
@@ -32,6 +31,7 @@ class MyApp extends StatelessWidget {
       routerDelegate: AppRouter.router.routerDelegate,
       title: AppConsts.appName,
       theme: lightTheme,
+      darkTheme: darkTheme,
     );
   }
 }
