@@ -3,5 +3,5 @@ import 'package:tudu/core/translations/generated/l10n.dart';
 
 extension LocalizedBuildContext on BuildContext {
   // simplify access to localizations
-  Translation get loc => Translation.of(this);
+  Translation get t => Translation.of(this);
 }

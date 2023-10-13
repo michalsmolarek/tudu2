@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tudu/core/translations/extensions/localization_extension.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,9 +8,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Center(
+      body: Center(
         child: Text(
-          'Home Page',
+          context.t.ok,
         ),
       ),
     );

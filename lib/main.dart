@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:tudu/config/constants/consts.dart';
-import 'package:tudu/config/theme/themes.dart';
+import 'package:tudu/config/theme/app_theme.dart';
 import 'package:tudu/core/router/router.dart';
 import 'package:tudu/core/translations/generated/l10n.dart';
 import 'package:tudu/injectable/injectable.dart';
@@ -24,14 +24,14 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: Translation.delegate.supportedLocales,
-      locale: const Locale('pl'),
+      locale: Translation.delegate.supportedLocales.first,
       debugShowCheckedModeBanner: false,
       routeInformationProvider: AppRouter.router.routeInformationProvider,
       routeInformationParser: AppRouter.router.routeInformationParser,
       routerDelegate: AppRouter.router.routerDelegate,
       title: AppConsts.appName,
-      theme: lightTheme,
-      darkTheme: darkTheme,
+      theme: getIt<AppTheme>().lightTheme,
+      darkTheme: getIt<AppTheme>().darkTheme,
     );
   }
 }
